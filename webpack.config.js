@@ -5,9 +5,10 @@ module.exports = {
   entry: path.resolve(__dirname, './src/main.js'),
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: 'vue-amp-shadow.min.js',
+    filename: 'vue-amp-shadow.js',
     libraryTarget: 'umd',
     library: 'VueAMPShadow',
+    umdNamedDefine: true,
   },
   module: {
     rules: [
