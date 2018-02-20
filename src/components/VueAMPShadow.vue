@@ -14,7 +14,7 @@ export default {
   mounted() {
     Promise.all([
       this.fetchDocument(),
-      this.ampReady(),
+      this.AMPReady(),
     ]).then(([AMPDocument, AMP]) => {
       this.container = document.getElementById('amp-host-element');
       this.attachedDocument = AMP.attachShadowDoc(this.container, AMPDocument, this.src);
@@ -45,7 +45,7 @@ export default {
         xhr.send();
       });
     },
-    ampReady() {
+    AMPReady() {
       return new Promise((resolve) => {
         (window.AMP = window.AMP || []).push(resolve);
       });
