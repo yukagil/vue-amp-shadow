@@ -17,7 +17,7 @@ yarn add vue-amp-shadow
 
 
 # Usage
-## 1. Include Shadow AMP in the <head> of your page
+## 1. Include Shadow AMP in the \<head\> of your page
 ```html
 <head>
   ...
