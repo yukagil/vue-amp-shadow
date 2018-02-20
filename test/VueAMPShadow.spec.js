@@ -9,6 +9,8 @@ describe('VueAMPShadow.vue', () => {
         src: requestURL,
       },
     });
+    expect(wrapper.is(VueAMPShadow)).toBe(true);
+    expect(wrapper.exists()).toBe(true);
     expect(wrapper.props().src).toBe(requestURL);
   });
 });
