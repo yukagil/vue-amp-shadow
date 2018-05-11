@@ -1,10 +1,10 @@
 <template>
-  <div :id="id"></div>
+  <div :id="id"/>
 </template>
 
 <script>
 export default {
-  name: 'vue-amp-shadow',
+  name: 'VueAmpShadow',
   props: {
     id: {
       type: String,

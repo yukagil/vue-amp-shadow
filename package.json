@@ -13,7 +13,8 @@
   },
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
-    "test": "mocha-webpack --webpack-config webpack.config.js --require test/setup.js test/*.spec.js"
+    "test": "mocha-webpack --webpack-config webpack.config.js --require test/setup.js test/*.spec.js",
+    "publish:patch": "yarn run build && npm version patch && git push origin master && git push origin --tags && npm publish --access=public"
   },
   "dependencies": {
     "babel-runtime": "^6.26.0",
