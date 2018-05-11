@@ -1,11 +1,16 @@
 <template>
-  <div id="amp-host-element"></div>
+  <div :id="id"></div>
 </template>
 
 <script>
 export default {
   name: 'vue-amp-shadow',
   props: {
+    id: {
+      type: String,
+      required: false,
+      default: 'amp-host-element',
+    },
     src: {
       type: String,
       required: true,
@@ -16,7 +21,7 @@ export default {
       this.fetchDocument(),
       this.AMPReady(),
     ]).then(([AMPDocument, AMP]) => {
-      this.container = document.getElementById('amp-host-element');
+      this.container = document.getElementById(this.id);
       this.attachedDocument = AMP.attachShadowDoc(this.container, AMPDocument, this.src);
     });
   },
