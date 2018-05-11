@@ -1,7 +1,7 @@
 {
   "name": "vue-amp-shadow",
   "description": "AMPShadow Component",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": "yuta.kanehara <litandy.ky@gmail.com>",
   "license": "MIT",
   "main": "dist/vue-amp-shadow.js",
